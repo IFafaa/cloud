@@ -100,6 +100,30 @@ Eles controlam todo o tráfego de rede **de entrada (inbound)** e **de saída (o
 
 ---
 
+## 🖼️ AMI (Amazon Machine Image)
+
+As **AMIs** são imagens utilizadas para criar instâncias EC2.
+
+### O que uma AMI pode conter:
+- Sistema operacional
+- Configurações da máquina
+- Variáveis de ambiente
+- Dependências
+- Arquivos
+- Configurações da aplicação
+
+### Benefícios:
+- Criação rápida de novas instâncias
+- Padronização de ambientes
+- Facilita escalabilidade e automação
+
+### Exemplo:
+- Criar uma AMI baseada em uma instância configurada
+- Subir uma nova instância utilizando essa AMI
+- A nova instância terá exatamente o mesmo ambiente
+
+---
+
 ## 🧠 Resumo Mental (Visão Geral)
 
 - Amazon EC2
@@ -120,4 +144,8 @@ Eles controlam todo o tráfego de rede **de entrada (inbound)** e **de saída (o
     - Spot
   - Segurança
     - Security Groups (Firewall)
+  - AMI
+    - Imagem da instância
+    - Padronização
+    - Escalabilidade
 
