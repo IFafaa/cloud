@@ -1,19 +1,21 @@
-# 💾 EC2 — Armazenamento (Resumo Completo)
+# EC2 - Armazenamento - Resumo Completo
 
-## 📌 Visão Geral
+## Visão Geral
+
 Dentro das **instâncias EC2**, é possível configurar diferentes tipos de **armazenamento**, de acordo com a necessidade da aplicação.
 
 De forma geral, o armazenamento pode ser dividido em:
-- **SSD** → melhor desempenho
-- **HDD** → menor custo por GB
+- **SSD** - melhor desempenho
+- **HDD** - menor custo por GB
 
-👉 A escolha depende do tipo de workload e do custo-benefício desejado.
+A escolha depende do tipo de workload e do custo-benefício desejado.
 
 ---
 
-## ⚙️ Tipos de Disco (SSD x HDD)
+## Tipos de Disco (SSD x HDD)
 
-### 🟦 SSD (Solid State Drive)
+### SSD (Solid State Drive)
+
 - Alta performance
 - Baixa latência
 - Ideal para:
@@ -21,9 +23,8 @@ De forma geral, o armazenamento pode ser dividido em:
   - Aplicações que exigem alto IOPS
 - Custo por GB mais elevado
 
----
+### HDD (Hard Disk Drive)
 
-### 🟫 HDD (Hard Disk Drive)
 - Menor custo por GB
 - Performance inferior ao SSD
 - Ideal para:
@@ -31,13 +32,14 @@ De forma geral, o armazenamento pode ser dividido em:
   - Dados raramente acessados
   - Workloads que não exigem alta performance
 
-📌 No EC2, você paga pelo **armazenamento provisionado**, não pelo uso.
+**Importante:** No EC2, você paga pelo **armazenamento provisionado**, não pelo uso.
 
 ---
 
-## 🗄️ Serviços de Armazenamento
+## Serviços de Armazenamento
 
-### 📦 Amazon EBS (Elastic Block Store)
+### Amazon EBS (Elastic Block Store)
+
 - Armazenamento em bloco
 - Pode ser anexado a **apenas uma instância EC2 por vez**
 - Persistente (não é apagado ao desligar a instância, por padrão)
@@ -46,9 +48,8 @@ De forma geral, o armazenamento pode ser dividido em:
   - Bancos de dados
   - Aplicações que precisam de disco dedicado
 
----
+### Amazon EFS (Elastic File System)
 
-### 📁 Amazon EFS (Elastic File System)
 - Sistema de arquivos gerenciado
 - Pode ser montado em:
   - Uma ou várias instâncias EC2
@@ -58,9 +59,8 @@ De forma geral, o armazenamento pode ser dividido em:
   - Aplicações distribuídas
   - Compartilhamento de arquivos
 
----
+### Amazon FSx
 
-### 🗃️ Amazon FSx
 - Similar ao EFS, porém voltado para:
   - Windows
   - Sistemas de arquivos específicos
@@ -71,11 +71,12 @@ De forma geral, o armazenamento pode ser dividido em:
 
 ---
 
-## 📸 Snapshot
+## Snapshot
 
 O **Snapshot** é um **backup do volume (EBS)**.
 
-### Como funciona:
+### Como funciona
+
 - O snapshot captura o estado atual do disco
 - Fica armazenado no Amazon S3 (de forma gerenciada)
 - Pode ser usado para:
@@ -83,7 +84,8 @@ O **Snapshot** é um **backup do volume (EBS)**.
   - Criar um novo volume idêntico
   - Anexar o disco a outra instância
 
-### Exemplo prático:
+### Exemplo prático
+
 1. Criar um snapshot de um volume EBS
 2. Deletar a instância original
 3. Criar um novo volume a partir do snapshot
@@ -91,7 +93,7 @@ O **Snapshot** é um **backup do volume (EBS)**.
 
 ---
 
-## 🧠 Resumo Mental (Visão Geral)
+## Resumo Mental
 
 - EC2 Armazenamento
   - Tipos de Disco
@@ -108,4 +110,3 @@ O **Snapshot** é um **backup do volume (EBS)**.
   - Snapshot
     - Backup de volumes
     - Recuperação de dados
-

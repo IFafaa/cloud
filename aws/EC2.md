@@ -1,13 +1,14 @@
-# 🖥️ Amazon EC2 — Resumo Completo
+# Amazon EC2 - Resumo Completo
 
-## 📌 O que é o Amazon EC2
+## Visão Geral
+
 O **Amazon EC2 (Elastic Compute Cloud)** é o serviço da AWS que permite o **aluguel de máquinas virtuais**, chamadas de **instâncias**, para executar diversos tipos de aplicações e sistemas.
 
 Com o EC2, é possível provisionar recursos computacionais sob demanda, de forma escalável e altamente configurável.
 
 ---
 
-## 🧩 Principais Casos de Uso
+## Principais Casos de Uso
 
 O EC2 pode ser utilizado para rodar:
 
@@ -21,11 +22,11 @@ O EC2 pode ser utilizado para rodar:
 
 ---
 
-## ⚙️ Tipos de Instância (Configurações de Hardware)
+## Tipos de Instância (Configurações de Hardware)
 
 A AWS oferece uma grande variedade de **tipos de instância**, permitindo escolher o hardware ideal para cada cenário.
 
-### Exemplos de escolha por necessidade:
+### Exemplos de escolha por necessidade
 
 - **Banco de Dados**
   - Instâncias com maior capacidade de armazenamento
@@ -42,15 +43,16 @@ A AWS oferece uma grande variedade de **tipos de instância**, permitindo escolh
 - **Aplicações Web**
   - Instâncias balanceadas entre CPU, memória e rede
 
-👉 Cada tipo de instância é otimizado para um perfil específico de carga de trabalho.
+Cada tipo de instância é otimizado para um perfil específico de carga de trabalho.
 
 ---
 
-## 💰 Sistema de Cobrança
+## Sistema de Cobrança
 
 O serviço EC2 possui **três principais modelos de cobrança**:
 
-### 1️⃣ On-Demand
+### On-Demand
+
 - Pague apenas pelo tempo de uso
 - Sem compromisso de longo prazo
 - Ideal para:
@@ -58,18 +60,16 @@ O serviço EC2 possui **três principais modelos de cobrança**:
   - Testes
   - Workloads imprevisíveis
 
----
+### Savings Plans
 
-### 2️⃣ Savings Plans
 - Contrato de uso por um período definido (ex: 1 ou 3 anos)
 - Reduz significativamente o custo
 - Ideal para:
   - Workloads estáveis
   - Ambientes de produção previsíveis
 
----
+### Spot Instances
 
-### 3️⃣ Spot Instances
 - Utiliza a capacidade ociosa da AWS
 - Custo muito reduzido
 - **A instância pode ser interrompida a qualquer momento**
@@ -80,31 +80,34 @@ O serviço EC2 possui **três principais modelos de cobrança**:
 
 ---
 
-## 🔐 Security Groups
+## Security Groups
 
 Os **Security Groups** funcionam como o **firewall das instâncias EC2**.
 
 Eles controlam todo o tráfego de rede **de entrada (inbound)** e **de saída (outbound)**.
 
-### O que é possível configurar:
+### O que é possível configurar
+
 - Quem pode acessar a instância
 - Quais portas estão liberadas
 - Protocolos permitidos (TCP, UDP, ICMP, etc.)
 - IPs específicos ou ranges (CIDR)
 - Comunicação entre instâncias
 
-### Características importantes:
+### Características importantes
+
 - As regras são **stateful**
 - Se uma requisição de entrada é permitida, a resposta é automaticamente permitida
 - Segurança aplicada **no nível da instância**
 
 ---
 
-## 🖼️ AMI (Amazon Machine Image)
+## AMI (Amazon Machine Image)
 
 As **AMIs** são imagens utilizadas para criar instâncias EC2.
 
-### O que uma AMI pode conter:
+### O que uma AMI pode conter
+
 - Sistema operacional
 - Configurações da máquina
 - Variáveis de ambiente
@@ -112,19 +115,21 @@ As **AMIs** são imagens utilizadas para criar instâncias EC2.
 - Arquivos
 - Configurações da aplicação
 
-### Benefícios:
+### Benefícios
+
 - Criação rápida de novas instâncias
 - Padronização de ambientes
 - Facilita escalabilidade e automação
 
-### Exemplo:
+### Exemplo
+
 - Criar uma AMI baseada em uma instância configurada
 - Subir uma nova instância utilizando essa AMI
 - A nova instância terá exatamente o mesmo ambiente
 
 ---
 
-## 🧠 Resumo Mental (Visão Geral)
+## Resumo Mental
 
 - Amazon EC2
   - Máquinas Virtuais (Instâncias)
@@ -148,4 +153,3 @@ As **AMIs** são imagens utilizadas para criar instâncias EC2.
     - Imagem da instância
     - Padronização
     - Escalabilidade
-

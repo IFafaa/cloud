@@ -1,13 +1,14 @@
-# 🏢 AWS Organizations — Resumo Completo
+# AWS Organizations - Resumo Completo
 
-## 📌 O que é o AWS Organizations
+## Visão Geral
+
 O **AWS Organizations** é o serviço da AWS que permite **gerenciar e organizar múltiplas contas AWS de forma centralizada**, facilitando governança, segurança e controle de custos em ambientes complexos.
 
 Ele é especialmente útil para empresas que possuem **vários times, regiões ou ambientes** (dev, stage, prod).
 
 ---
 
-## 🌍 Caso de Uso — Empresa Global
+## Caso de Uso - Empresa Global
 
 Imagine uma empresa internacional com:
 - Uma equipe no **Brasil** (`sa-east-1`)
@@ -18,13 +19,14 @@ Nesse cenário:
 - Não faz sentido um desenvolvedor do Brasil conseguir modificar recursos da conta ou região dos EUA
 - Cada time deve ter acesso apenas ao que é necessário
 
-👉 O AWS Organizations permite **isolar contas**, **restringir ações** e **organizar permissões em alto nível**.
+O AWS Organizations permite **isolar contas**, **restringir ações** e **organizar permissões em alto nível**.
 
 ---
 
-## 🧱 Estrutura do AWS Organizations
+## Estrutura do AWS Organizations
 
-### 🏠 Conta de Gerenciamento (Management Account)
+### Conta de Gerenciamento (Management Account)
+
 - Conta principal da organização
 - Responsável por:
   - Criar e gerenciar contas
@@ -32,23 +34,21 @@ Nesse cenário:
   - Visualizar custos consolidados
 - Deve ser altamente protegida
 
----
+### Unidades Organizacionais (OUs)
 
-### 🗂️ Unidades Organizacionais (OUs)
 As **Organizational Units (OUs)** permitem agrupar contas com objetivos semelhantes.
 
-#### Exemplos de OUs:
+**Exemplos de OUs:**
 - `Brazil`
 - `USA`
 - `Development`
 - `Production`
 - `Finance`
 
-👉 Políticas podem ser aplicadas no nível da OU, afetando todas as contas dentro dela.
+Políticas podem ser aplicadas no nível da OU, afetando todas as contas dentro dela.
 
----
+### Contas AWS
 
-### 🧾 Contas AWS
 - Cada conta é isolada por padrão
 - Ideal para:
   - Separar ambientes (dev/stage/prod)
@@ -57,7 +57,7 @@ As **Organizational Units (OUs)** permitem agrupar contas com objetivos semelhan
 
 ---
 
-## 💰 Centralização de Custos
+## Centralização de Custos
 
 Uma grande vantagem do AWS Organizations é a **centralização do faturamento**.
 
@@ -66,25 +66,26 @@ Uma grande vantagem do AWS Organizations é a **centralização do faturamento**
 - Melhor visibilidade e controle financeiro
 - Não é necessário criar múltiplas contas root independentes
 
-👉 Ideal para empresas com estrutura global.
+Ideal para empresas com estrutura global.
 
 ---
 
-## 🔐 Políticas de Controle de Serviço (SCPs)
+## Políticas de Controle de Serviço (SCPs)
 
 As **Service Control Policies (SCPs)** definem **o que é permitido ou proibido** em nível organizacional.
 
-### Pontos importantes:
+### Pontos importantes
+
 - SCPs **não concedem permissões**
 - SCPs apenas **restringem ações**
 - Elas atuam como um **guardrail (proteção)**
 
-📌 Mesmo que o IAM permita uma ação,  
+Mesmo que o IAM permita uma ação,  
 se a SCP negar, a ação **não será executada**.
 
 ---
 
-## 🧠 Relação AWS Organizations x IAM
+## Relação AWS Organizations x IAM
 
 - **IAM**
   - Define permissões
@@ -94,11 +95,11 @@ se a SCP negar, a ação **não será executada**.
   - Restringe permissões
   - Define *o que nunca pode ser feito*
 
-👉 O Organizations atua **acima do IAM**, garantindo governança e segurança global.
+O Organizations atua **acima do IAM**, garantindo governança e segurança global.
 
 ---
 
-## 🏗️ Quando Usar AWS Organizations
+## Quando Usar AWS Organizations
 
 - Empresas com múltiplas contas AWS
 - Times distribuídos
@@ -108,7 +109,7 @@ se a SCP negar, a ação **não será executada**.
 
 ---
 
-## 🧠 Resumo Mental (Visão Geral)
+## Resumo Mental
 
 - AWS Organizations
   - Gerenciamento Centralizado
@@ -119,4 +120,3 @@ se a SCP negar, a ação **não será executada**.
   - Atua acima do IAM
   - Centralização de custos
   - Ideal para empresas e times grandes
-

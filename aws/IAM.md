@@ -1,13 +1,14 @@
-# 🔐 AWS IAM — Resumo Completo
+# AWS IAM - Resumo Completo
 
-## 📌 O que é o AWS IAM
+## Visão Geral
+
 O **AWS IAM (Identity and Access Management)** é o serviço da AWS responsável por **gerenciar identidades, acessos e permissões** dentro de uma conta AWS.
 
 Com o IAM, é possível controlar **quem pode acessar o console da AWS**, **quais serviços pode usar** e **quais ações pode executar**.
 
 ---
 
-## 👥 Casos de Uso Comuns
+## Casos de Uso Comuns
 
 O IAM permite criar usuários específicos para diferentes perfis dentro da empresa, por exemplo:
 
@@ -24,29 +25,28 @@ O IAM permite criar usuários específicos para diferentes perfis dentro da empr
     - Relatórios financeiros
   - Sem permissões técnicas ou administrativas
 
-👉 Cada usuário possui permissões **mínimas e específicas**, seguindo o princípio do **menor privilégio**.
+Cada usuário possui permissões **mínimas e específicas**, seguindo o princípio do **menor privilégio**.
 
 ---
 
-## 🧱 Usuários, Grupos e Roles
+## Usuários, Grupos e Roles
 
-### 👤 Usuários (Users)
+### Usuários (Users)
+
 - Representam pessoas ou sistemas
 - Possuem credenciais próprias (login e senha ou access keys)
 
----
+### Grupos (Groups)
 
-### 👥 Grupos (Groups)
 Permitem agrupar usuários com permissões semelhantes.
 
-#### Exemplo:
+**Exemplo:**
 - Grupo: `financial`
   - Contém todos os funcionários do financeiro
   - Facilita a gestão de permissões
 
----
+### Roles (Funções)
 
-### 🎭 Roles (Funções)
 As **Roles** definem **o que pode ser feito** dentro da conta AWS.
 
 - Grupos são associados a **políticas**
@@ -56,7 +56,7 @@ As **Roles** definem **o que pode ser feito** dentro da conta AWS.
   - Aplicações
   - Usuários assumindo funções temporárias
 
-#### Exemplo prático:
+**Exemplo prático:**
 - Grupo `financial`
   - Associado a policies de:
     - Visualização de custos
@@ -65,7 +65,7 @@ As **Roles** definem **o que pode ser feito** dentro da conta AWS.
 
 ---
 
-## 📜 Policies (Políticas)
+## Policies (Políticas)
 
 As **Policies** são documentos em **JSON** que definem permissões.
 
@@ -77,18 +77,18 @@ Elas controlam:
 
 ---
 
-## 🔐 Segurança no IAM
+## Segurança no IAM
 
-### 🔑 MFA (Multi-Factor Authentication)
+### MFA (Multi-Factor Authentication)
+
 - Adiciona uma camada extra de segurança
 - Requer algo que o usuário **sabe** (senha) + algo que **possui** (token/app)
 
-👉 Altamente recomendado para todos os usuários  
-👉 **Obrigatório para a conta root**
+Altamente recomendado para todos os usuários.  
+**Obrigatório para a conta root.**
 
----
+### Política de Senhas
 
-### 🔒 Política de Senhas
 É possível configurar regras como:
 - Tempo de expiração da senha
 - Bloqueio de reutilização de senhas antigas
@@ -97,17 +97,17 @@ Elas controlam:
 
 ---
 
-## ⚠️ Conta Root — Atenção Máxima
+## Conta Root - Atenção Máxima
 
 - A conta **root** possui acesso total à conta AWS
 - **Nunca deve ser usada no dia a dia**
 - Deve ser usada apenas para:
   - Configurações iniciais
   - Atividades críticas da conta
-  
+
 ---
 
-## 🧠 Resumo Mental (Visão Geral)
+## Resumo Mental
 
 - AWS IAM
   - Gerenciamento de Identidade
@@ -122,4 +122,3 @@ Elas controlam:
   - Conta Root
     - MFA obrigatório
     - Uso restrito
-

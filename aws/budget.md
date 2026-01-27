@@ -1,15 +1,18 @@
-# 💰 AWS Budgets — Resumo Completo
+# AWS Budgets - Resumo Completo
 
-## 📌 O que é o AWS Budgets
+## Visão Geral
+
 O **AWS Budgets** é o serviço da AWS utilizado para **criar orçamentos e monitorar gastos**, permitindo **notificações automáticas** quando os custos ou o uso ultrapassam limites definidos.
 
-⚠️ Importante:  
+**Importante:**  
 O AWS Budgets **não interrompe nem desliga serviços automaticamente**.  
 Ele serve **exclusivamente para alertar** sobre os gastos.
 
 ---
 
-## 🎯 Objetivo do AWS Budgets
+## Objetivo
+
+O AWS Budgets permite:
 - Acompanhar como os gastos estão evoluindo
 - Evitar surpresas na fatura
 - Ajudar no controle financeiro da conta AWS
@@ -17,9 +20,9 @@ Ele serve **exclusivamente para alertar** sobre os gastos.
 
 ---
 
-## 📊 Tipos de Orçamento
+## Tipos de Orçamento
 
-O AWS Budgets permite criar diferentes tipos de orçamento, como:
+O AWS Budgets permite criar diferentes tipos de orçamento:
 
 - **Orçamento por custo**
   - Baseado no valor gasto (ex: R$ 500 / mês)
@@ -32,7 +35,7 @@ O AWS Budgets permite criar diferentes tipos de orçamento, como:
 
 ---
 
-## 🔔 Alertas e Notificações
+## Alertas e Notificações
 
 É possível configurar alertas de diversas formas:
 
@@ -50,7 +53,7 @@ O AWS Budgets permite criar diferentes tipos de orçamento, como:
 
 ---
 
-## ⚠️ Pontos Importantes
+## Pontos Importantes
 
 - Criar um orçamento **não limita nem bloqueia gastos**
 - Serviços **continuam rodando normalmente**
@@ -59,14 +62,14 @@ O AWS Budgets permite criar diferentes tipos de orçamento, como:
   - Alerta
   - Controle financeiro
 
-👉 Para ações automáticas (ex: desligar recursos), é necessário integrar com:
+Para ações automáticas (ex: desligar recursos), é necessário integrar com:
 - AWS Lambda
 - AWS SNS
 - AWS EventBridge
 
 ---
 
-## 🧠 Resumo Mental (Visão Geral)
+## Resumo Mental
 
 - AWS Budgets
   - Controle de Custos
@@ -76,4 +79,3 @@ O AWS Budgets permite criar diferentes tipos de orçamento, como:
     - Diário / Mensal
   - Não interrompe serviços
   - Apenas notificação
-

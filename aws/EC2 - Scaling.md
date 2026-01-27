@@ -1,6 +1,7 @@
-# 📈 Escalabilidade no EC2 — Resumo Completo
+# Escalabilidade no EC2 - Resumo Completo
 
-## 📌 Visão Geral
+## Visão Geral
+
 O **Amazon EC2** possui diversos recursos que permitem **escalar aplicações automaticamente**, garantindo performance, disponibilidade e otimização de custos.
 
 Existem **dois tipos principais de escalabilidade**:
@@ -10,41 +11,45 @@ Existem **dois tipos principais de escalabilidade**:
 
 ---
 
-## ⬆️ Escalabilidade Vertical (Vertical Scaling)
+## Escalabilidade Vertical (Vertical Scaling)
 
 A escalabilidade vertical consiste em **aumentar o poder computacional de uma instância existente**.
 
-### Exemplos:
+### Exemplos
+
 - Aumentar CPU
 - Aumentar memória (RAM)
 - Migrar para um tipo de instância mais potente
 
-### Características:
+### Características
+
 - Simples de implementar
 - Pode exigir parada da instância
 - Possui limite máximo de hardware
 
-👉 Indicada para:
+### Indicada para
+
 - Aplicações simples
 - Ambientes menores
 - Workloads que não escalam facilmente
 
 ---
 
-## ➡️ Escalabilidade Horizontal (Horizontal Scaling)
+## Escalabilidade Horizontal (Horizontal Scaling)
 
 A escalabilidade horizontal consiste em **adicionar ou remover instâncias EC2**, conforme a demanda.
 
-### Características:
+### Características
+
 - Alta disponibilidade
 - Escalabilidade praticamente ilimitada
 - Exige balanceamento de carga
 
-👉 Para esse tipo de escalabilidade, é **obrigatório o uso de um Load Balancer**.
+Para esse tipo de escalabilidade, é **obrigatório o uso de um Load Balancer**.
 
 ---
 
-## ⚖️ Load Balancer (Balanceador de Carga)
+## Load Balancer (Balanceador de Carga)
 
 O **Load Balancer** é o componente responsável por ficar entre:
 - O usuário (browser / cliente)
@@ -57,17 +62,17 @@ Ele distribui as requisições para as instâncias disponíveis, garantindo:
 
 ---
 
-## 🧰 Tipos de Load Balancer
+## Tipos de Load Balancer
 
-### 🔹 ELB (Classic Load Balancer)
+### ELB (Classic Load Balancer)
+
 - Indicado para:
   - Serviços internos
   - Aplicações legadas
 - Menos recursos que os modelos modernos
 
----
+### ALB (Application Load Balancer)
 
-### 🔹 ALB (Application Load Balancer)
 - Indicado para:
   - Tráfego público
   - Aplicações web modernas
@@ -79,24 +84,26 @@ Ele distribui as requisições para as instâncias disponíveis, garantindo:
 
 ---
 
-## 🔄 Auto Scaling
+## Auto Scaling
 
 O **Auto Scaling** é o serviço responsável por **gerenciar automaticamente a quantidade de instâncias EC2**.
 
-### O que ele faz:
+### O que ele faz
+
 - Cria novas instâncias quando a demanda aumenta
 - Remove instâncias quando a demanda diminui
 - Substitui instâncias que falharam
 - Mantém a aplicação saudável
 
-### Benefícios:
+### Benefícios
+
 - Alta disponibilidade
 - Elasticidade automática
 - Otimização de custos
 
 ---
 
-## 🧠 Resumo Mental (Visão Geral)
+## Resumo Mental
 
 - Escalabilidade EC2
   - Vertical
@@ -115,4 +122,3 @@ O **Auto Scaling** é o serviço responsável por **gerenciar automaticamente a 
     - Criação automática de instâncias
     - Substituição em caso de falha
     - Redução de custos
-
